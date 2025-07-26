@@ -15,7 +15,7 @@
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "puppeteer": "^22.6.5",
-    "puppeteer-extra": "^8.1.0",
+    "puppeteer-extra": "^11.0.0",
     "puppeteer-extra-plugin-stealth": "^2.11.2",
     "dotenv": "^16.4.5"
   },
