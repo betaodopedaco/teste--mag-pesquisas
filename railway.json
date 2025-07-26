@@ -2,7 +2,10 @@
   "build": {
     "builder": "nixpacks",
     "config": {
-      "nodeVersion": "18"
+      "nodeVersion": "18",
+      "installCommand": "cd server && npm install",
+      "buildCommand": "echo 'Build completo'",
+      "startCommand": "cd server && npm run start:prod"
     }
   }
 }
