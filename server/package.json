@@ -1,5 +1,5 @@
 {
-  "name": "server",
+  "name": "google-maps-scraper",
   "version": "1.0.0",
   "description": "Backend para scraping do Google Maps",
   "main": "server.js",
