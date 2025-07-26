@@ -2,14 +2,9 @@
   "name": "meu-scraper",
   "version": "1.0.0",
   "scripts": {
-    "postinstall": "cd client && npm install",
-    "build": "cd client && npm run build"
+    "start": "cd server && npm start"
   },
   "engines": {
     "node": "18.x"
   }
-}
-"scripts": {
-  "start": "node server.js",
-  "start:prod": "node server.js"
 }
