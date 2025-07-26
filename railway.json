@@ -3,9 +3,9 @@
     "builder": "nixpacks",
     "config": {
       "nodeVersion": "18",
-      "installCommand": "cd server && npm install",
+      "installCommand": "cd api && npm install",
       "buildCommand": "echo 'Build completo'",
-      "startCommand": "cd server && npm run start:prod"
+      "startCommand": "cd api && npm run start:prod"
     }
   }
 }
