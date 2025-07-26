@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "start:prod": "NODE_ENV=production node server.js"
-  },
+  }
   "dependencies": {
     "@sparticuz/chromium": "^116.0.0",
     "cors": "^2.8.5",
@@ -15,7 +15,7 @@
     "puppeteer-core": "^24.4.0",
     "puppeteer-extra": "^3.3.6",
     "puppeteer-extra-plugin-stealth": "^2.11.2"
-  },
+  }
   "engines": {
     "node": "18.x"
   }
