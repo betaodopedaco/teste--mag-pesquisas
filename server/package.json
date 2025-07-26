@@ -3,8 +3,9 @@
     "start": "node server.js",
     "start:prod": "NODE_ENV=production node server.js"
   },
+ {
   "dependencies": {
     "@sparticuz/chromium": "^116.0.0",
-    "chromium": "^3.0.3"
+    "puppeteer-core": "^24.4.0"
   }
 }
