@@ -2,6 +2,6 @@
   "build": {
     "builder": "nixpacks",
     "buildCommand": "cd server && npm install",
-    "startCommand": "cd server && npm start"
+    "startCommand": "npm run start:prod"
   }
 }
