@@ -1,20 +1,36 @@
-{
-  "name": "server",
-  "version": "1.0.0",
-  "description": "Backend para scraping do Google Maps",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js",
-    "start:prod": "node server.js"
-  },
-  "dependencies": {
-    "@sparticuz/chromium": "^116.0.0",
-    "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
-    "express": "^4.18.2",
-    "puppeteer-core": "^24.4.0",
-    "puppeteer-extra": "^3.3.6",
-    "puppeteer-extra-plugin-stealth": "^2.11.2"
-  },
-  "engines": {
-    "node": "18.x" } }
+const express = require('express');
+const puppeteer = require('puppeteer-extra');
+const StealthPlugin = require('puppeteer-extra-plugin-stealth');
+require('dotenv').config();
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Adiciona plugin de stealth
+puppeteer.use(StealthPlugin());
+
+// Rota de exemplo
+app.get('/scrape', async (req, res) => {
+  try {
+    const browser = await puppeteer.launch({
+      args: ['--no-sandbox'],
+      executablePath: process.env.CHROMIUM_PATH || await chromium.executablePath()
+    });
+    
+    const page = await browser.newPage();
+    await page.goto('https://example.com');
+    
+    // Seu código de scraping aqui...
+    
+    await browser.close();
+    res.json({ success: true });
+    
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
